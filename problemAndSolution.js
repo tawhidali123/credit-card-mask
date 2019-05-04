@@ -36,3 +36,18 @@ describe("maskify", function(){
     Test.assertEquals(maskify('11111'), '#1111');
   });
 });
+
+
+
+
+// amicks changes
+const amicksMask = cc => {
+  let maskedCC = [
+    ...cc.slice(0, cc.length - 4).split("").map(e => e.replace(e, "#")),
+    ...cc.slice(-4)
+  ].join("");
+
+  return maskedCC
+}
+
+amicksMask("4556364607935616");
