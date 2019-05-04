@@ -28,6 +28,8 @@ function maskify(cc) {
 }
 
 
+maskify("4556364607935616")
+
 //SampleTests
 describe("maskify", function(){
   it("should work for some examples", function(){
@@ -47,7 +49,7 @@ const amicksMask = cc => {
     ...cc.slice(-4)
   ].join("");
 
-  return maskedCC
+  return cc.length >= 4 ? maskedCC : cc; 
 }
 
 amicksMask("4556364607935616");
